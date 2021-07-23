@@ -1,0 +1,5 @@
+<xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
+  <category name="relay4ch" colour="#3F63AD" icon="thermometer-quarter">
+    <block type="xbot_relay4ch" />
+  </category>
+</xml>

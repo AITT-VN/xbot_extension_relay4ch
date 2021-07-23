@@ -1,0 +1,13 @@
+{
+    "name": "Relay 4 kênh",
+    "description": "Mục mở rộng của xbot cho module Relay 4 kênh",
+    "libs": [
+    ],
+    "blocks": [
+        "definition.js"
+    ],
+    "toolbox": "toolbox.xml",
+    "languages": {
+    },
+    "poster": "poster.png"
+}
