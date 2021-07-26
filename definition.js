@@ -2,7 +2,7 @@
 Blockly.Blocks["xbot_relay4ch"] = {
   init: function () {
     this.jsonInit({
-      colour: "#3F63AD",
+      colour: "#ff9933",
       tooltip: "",
       message0: "relay 4 kênh cổng %1 %2 kênh %3",
       args0: [
