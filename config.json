@@ -2,6 +2,7 @@
     "name": "Relay 4 kênh",
     "description": "Mục mở rộng của xbot cho module Relay 4 kênh",
     "libs": [
+        "relay4ch.py"
     ],
     "blocks": [
         "definition.js"

@@ -2,7 +2,7 @@
 Blockly.Blocks["xbot_relay4ch"] = {
   init: function () {
     this.jsonInit({
-      colour: "#ff9933",
+      colour: "#00A06B",
       tooltip: "",
       message0: "relay 4 kênh cổng %1 %2 kênh %3",
       args0: [
@@ -22,16 +22,18 @@ Blockly.Blocks["xbot_relay4ch"] = {
           type: "field_dropdown",
           name: "stat",
           options: [
-            ["bật", "1"],
-            ["tắt", "0"],
+            ["bật", "on"],
+            ["tắt", "off"],
           ],
         },
         {
           type: "field_dropdown",
-          name: "change",
+          name: "relay_number",
           options: [
-            ["1", "0"],
-            ["2", "1"],
+            ["S1", "0"],
+            ["S2", "1"],
+            ["S3", "2"],
+            ["S4", "3"],
           ],
         },
         ],
@@ -43,15 +45,12 @@ Blockly.Blocks["xbot_relay4ch"] = {
 };
 
 // PYTHON
-
-
 Blockly.Python["xbot_relay4ch"] = function (block) {
   var port = block.getFieldValue("port");
   var stat = block.getFieldValue("stat");
-  var change = block.getFieldValue("change");
+  var relay_number = block.getFieldValue("relay_number");
   // TODO: Assemble Python into code variable.
   Blockly.Python.definitions_['import_relay4ch'] = "from relay4ch import *";
-  var code = "relay4ch.set("+port+","+change+","+stat+")\n";
+  var code = "relay4ch.turn_" + stat + "(" + port + ", " + relay_number + ")\n";
   return code;
 };
-
